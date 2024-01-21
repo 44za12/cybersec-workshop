@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  vulnerable_ssh:
+    image: sickp/alpine-sshd:latest
+    ports:
+      - "2222:22"
+
+  mysql:
+    image: mysql/mysql-server:latest-aarch64 
+    environment:
+      MYSQL_ROOT_PASSWORD: 'alexis15'
+      MYSQL_DATABASE: vulnerableDB
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql_setup.sql:/docker-entrypoint-initdb.d/mysql_setup.sql
+
+  vulnerable_web:
+    image: vulnerables/web-dvwa
+    environment:
+      MYSQL_PASSWORD: 'alexis15'
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+

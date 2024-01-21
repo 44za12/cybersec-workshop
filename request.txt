@@ -1,0 +1,3 @@
+GET /vulnerabilities/sqli/?id=user&Submit=Submit HTTP/1.1
+Host: localhost:8080
+Cookie: PHPSESSID=SESSION_ID; security=low

@@ -1,0 +1,3 @@
+<script>alert("Hacked")</script>
+<Script>alert(“Hacked”)</Script>
+<svg/onload=alert(“Hacked”)>
