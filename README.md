@@ -37,7 +37,7 @@
         - Installation: `go install github.com/OJ/gobuster/v3@latest`
         - Example: `gobuster dir -u target.com -w dirlist.txt`
 
-    - gobuster:
+    - cupp:
         - Homepage: https://github.com/Mebus/cupp
         - Installation: `git clone https://github.com/Mebus/cupp.git`
         - Example: `python3 cupp.py`
